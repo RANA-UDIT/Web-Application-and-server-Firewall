@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Server</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        .customization-item {
+            margin: 10px;
+        }
+
+        label {
+            display: inline-block;
+            width: 120px;
+        }
+
+        input[type="checkbox"] {
+            vertical-align: middle;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+
+        input[type="submit"] {
+            display: block;
+            margin: 20px auto;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1><b>Server</b></h1>
+    <form id="customizationForm" method="post">
+        <h2>Server Ports</h2>
+        <div class="customization-item">
+            <label for="port80">Port 80:</label>
+            <input type="checkbox" id="port80" name="port80">
+        </div>
+        <div class="customization-item">
+            <label for="port443">Port 443:</label>
+            <input type="checkbox" id="port443" name="port443">
+        </div>
+        <div class="customization-item">
+            <label for="port8080">Port 8080:</label>
+            <input type="checkbox" id="port8080" name="port8080">
+        </div>
+        <div class="customization-item">
+            <label for="port20">Port 20:</label>
+            <input type="checkbox" id="port20" name="port20">
+        </div>
+        <div class="customization-item">
+            <label for="port21">Port 21:</label>
+            <input type="checkbox" id="port21" name="port21">
+        </div>
+        <div class="customization-item">
+            <label for="port53">Port 53:</label>
+            <input type="checkbox" id="port53" name="port53">
+        </div>
+        <input type="submit" name="submit" value="Apply Changes">
+    </form>
+</body>
+</html>

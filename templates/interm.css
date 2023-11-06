@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster|Open+Sans');
+body {
+  background-color: #6a3131;
+  background: url(https://i.imgur.com/faFcxS1.png);
+  font-family: 'Open Sans', sans-serif !important;
+  animation: scroll 70s infinite linear;
+}
+.firetext {
+  color: rgb(151, 10, 10);
+  text-align: center;
+  margin-left:auto;
+  margin-right:auto;
+  background: rgba(0, 0, 0, .3);
+  width: 500px;
+  padding: 5px;
+}
+
+.database_firewall {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: white;
+  font-family: "Chiller";
+  font-size: 100px;
+}
+
+@keyframes scroll {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+
+.load{
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 3px;
+  width: 500px;
+  z-index: 1;
+  padding: 2px;
+  background: #393232;
+  position: static;
+}
+.bar{
+  margin-right: auto;
+  border-radius: 5px;
+  width: 484px;
+  padding: 8px;
+background: rgb(51, 122, 183);; background-image: repeating-linear-gradient(-45deg, transparent, transparent 35px, rgba(255,255,255,.5) 35px, rgba(255,255,255,.5) 70px);
+    animation: load 1s linear infinite;
+}
+@keyframes load {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100px 0;
+  }
+}
+.bounceIn{
+  animation-delay: 0.5s;
+}

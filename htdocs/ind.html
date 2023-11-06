@@ -1,0 +1,83 @@
+<?php
+$con=mysqli_connect('localhost','udit','udit','web');
+if(!$con){
+    die(mysqli_error("error"+$con));
+}
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    
+<title>Welcome to server</title>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    
+<h1> Check Service and Repair Status here</h1>
+<style> h1 {color:Black;} </style>
+
+<form method="post">
+
+TicketNo   <input type="text" placeholder="Enter your Ticket no here.." name ="search">
+Email  <input type="text" placeholder="Enter your email here..." name ="search2">
+
+<br>
+<br>
+
+<button name="submit">Submit</button>
+</form>
+<div class="container">
+            <?php
+            if(isset($_POST['submit'])){
+                $search=$_POST['search'];
+                $search2=$_POST['search2'];
+                
+                $sql="select `cstatus`,`device` from `status` where ticketno='$search' and email='$search2'";
+                $result=mysqli_query($con,$sql);
+                if($result){
+                   if( $num=mysqli_num_rows($result) >0 ){
+                    echo 
+                    '<thead>
+                    <tr>
+                    <th></th>
+                        <th></th>
+                         </tr>
+                         </thead><br>';
+                         $row=mysqli_fetch_assoc($result);
+                         echo '<tbody>
+                         <tr><p> <h3><b>Current Status :</b></h3> 
+                         <b>Device:</b>      <td>'.$row['device'].'</a></td><br>
+                        <b>Status :</b>      <td>'.$row['cstatus'].'</a></td><br>
+                        
+                        
+                            </p>  </tr>
+                              </tbody>';
+                              
+                 
+                   } 
+                   else{
+                    echo "<h2><b>Incorect Entry !! Check again.............</b></h2>";
+                   }
+                }
+            }
+            
+                        ?>
+                        
+                    </div>
+                </div>
+
+
+
+
+
+</body>
+
+</html>
+
+
+

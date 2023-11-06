@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Intermediate Page</title>
+</head>
+<body>
+    <div>
+        <p>Please wait while we process your request...</p>
+    </div>
+    <script>
+        // After 5 seconds, redirect to the Apache server
+        setTimeout(function() {
+            window.location.href = "http://localhost";
+        }, 3000); // 5000 milliseconds = 5 seconds
+    </script>
+</body>
+</html>

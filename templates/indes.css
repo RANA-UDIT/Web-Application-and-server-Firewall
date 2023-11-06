@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+overflow: hidden;
+
+}
+body{
+
+    background: url('img1.jpeg');
+}
+.container{
+    
+    height: 100vh;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.box2{
+    align-items: center;
+    text-align: center;
+    background: whitesmoke;
+    height: max-content;
+    width: max-content;
+    margin-top: 2px;
+    margin-left: 80%;
+
+}
+.box1{
+ opacity: 0.5;
+    align-items: center;
+    text-align: center;
+    background: whitesmoke;
+    height: 100px;
+    width: 500px;
+
+}
+
+input,button{
+background-color:aliceblue;
+border: 2px groove rgb(32, 32, 26);
+
+}

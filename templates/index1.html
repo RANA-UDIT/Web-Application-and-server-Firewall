@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Server Login</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <form id="loginForm" action="redirect" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label for="userType">User Type:</label>
+        <select id="userType" name="userType">
+            <option value="admin">Admin</option>
+            <option value="standard">Standard User</option>
+        </select><br><br>
+        
+        <label for="urlInput">Enter URL:</label>
+        <input type="text" id="urlInput" name="urlInput" required><br><br>
+        
+        <button type="button" onclick="loginAndRedirect()">Login</button>
+    </form>
+    
+    <script>
+        function loginAndRedirect() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var userType = document.getElementById("userType").value;
+            
+         
+            if (username && password && userType) {
+                var url = document.getElementById("urlInput").value;
+                window.location.href = url;
+            }
+        }
+    </script>
+</body>
+</html>
